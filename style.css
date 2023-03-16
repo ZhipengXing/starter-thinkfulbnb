@@ -23,6 +23,8 @@ p {
 
 section {
   padding: 20px;
+  margin-left:10px;
+  margin-right:10px
 }
 
 section.alternate-background {
@@ -31,7 +33,7 @@ section.alternate-background {
 }
 
 main img {
-  width: 100px;
+  width: 100%;
 }
 
 /* ---  Groups & Items --- */
@@ -56,6 +58,16 @@ header {
   background-color: #ff385c;
   padding: 20px 20px 0 20px;
   text-align: center;
+
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul{
+  display: flex;
 }
 
 .logo {
@@ -74,15 +86,25 @@ header nav ul li a {
   padding: 0 20px 0 0;
 }
 
-header nav ul li a:hover {
-  color: #bdbdbd;
-  text-decoration: none;
-}
+
 
 /* -------  Search Form ------- */
 form {
   border: 2px solid #ff385c;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+form .item{
+  justify-content: space-between;
+  display: flex;
+}
+
+form input{
+  justify-content: flex-end;
 }
 
 form label {
@@ -108,6 +130,7 @@ form button {
 
 footer {
   background-color: #ff385c;
+  margin:0px 10px 0 10px;
 }
 
 footer p {
@@ -117,3 +140,65 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+
+@media all and (min-width:480px) {
+  header nav ul li a:hover {
+    color: #bdbdbd;
+    text-decoration: none;
+  }
+
+/* ---  Groups & Items --- */
+
+.group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.container{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+}
+
+.container .item{
+ flex: 45%;
+  margin-bottom:2%
+}
+
+header{
+  display:flex;
+  justify-items: space-between;
+  align-items: center;
+  padding: 0 20px 0 20px;
+  
+}
+
+header .item{
+  width:30%
+}
+
+header .logo {
+ text-align: left;
+ font-size:36px
+}
+
+header nav {
+  justify-content: right;
+}
+
+form {
+  border: 2px solid #ff385c;
+  padding: 10px;
+  display: flex; 
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+form .item{
+display: inline;
+
+}
+
+}
